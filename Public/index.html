@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8"/>
+        <title>Translation Bot</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="stylesheet" href="Vendor\bootstrap\css\bootstrap.css.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="Vendor\JQuery\jquery.js"></script>
+    </head>
+    <body>
+        <div class="section col-lg-12">
+            <div class="container col-lg-12">
+                <div class="row">
+                    <div class="upper-border col-lg-12"></div>
+                    <div class="border left-border col-lg-2"></div>
+                    <div class="chat-field col-lg-8">
+                        <div class="fadeaway col-lg-12"></div>
+                        <div class="output-field col-lg-12">
+                            <ul class="output col-lg-12">
+                                <li class="col-lg-12">
+                                        <div class="col-lg-4"></div>
+                                        <div  id="user" class="out col-lg-8">
+                                            <p>Blabla&nbsp;&nbsp;&nbsp; :You</p>
+                                        </div>
+                                </li>
+                                    
+                                <li class="col-lg-12">
+                                    <div  id="bot" class="out col-lg-8">
+                                        <p>Bot:&nbsp;&nbsp;&nbsp; Oh yeah</p>
+                                    </div>
+                                    <div class="col-lg-4"></div>
+                                </li>
+    
+                                <li class="col-lg-12">
+                                        <div class="col-lg-4"></div>
+                                        <div  id="user" class="out col-lg-8">
+                                            <p>Blabla&nbsp;&nbsp;&nbsp; :You</p>
+                                        </div>
+                                </li>
+                                
+                                <li class="col-lg-12">
+                                        <div  id="bot" class="out col-lg-8">
+                                            <p>Bot:&nbsp;&nbsp;&nbsp; Oh yeah</p>
+                                        </div>
+                                        <div class="col-lg-4"></div>
+                                </li>
+                                
+                                <li class="col-lg-12">
+                                        <div class="col-lg-4"></div>
+                                        <div  id="user" class="out col-lg-8">
+                                            <p>Blabla&nbsp;&nbsp;&nbsp; :You</p>
+                                        </div>
+                                </li>
+                                    
+                                <li class="col-lg-12">
+                                    <div  id="bot" class="out col-lg-8">
+                                        <p>Bot:&nbsp;&nbsp;&nbsp; Oh yeah</p>
+                                    </div>
+                                    <div class="col-lg-4"></div>
+                                </li>
+                                
+                                <li class="col-lg-12">
+                                        <div class="col-lg-4"></div>
+                                        <div  id="user" class="out col-lg-8">
+                                            <p>Blabla&nbsp;&nbsp;&nbsp; :You</p>
+                                        </div>
+                                </li>
+                                    
+                                <li class="col-lg-12">
+                                    <div  id="bot" class="out col-lg-8">
+                                        <p>Bot:&nbsp;&nbsp;&nbsp; Oh yeah</p>
+                                    </div>
+                                    <div class="col-lg-4"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="input-field col-lg-12">
+                            <form action="" method="POST" enctype="multipart/form-data" id="form-chat">
+                                <div class="voice form-group col-lg-1">
+                                        <button class="btn btn-danger"><i class="fa fa-microphone"></i></button>
+                                </div>
+                                <div class="form-group col-lg-11">
+                                    <input class="col-lg-10" type="text" id="user-input" name="user-input" placeholder="Please type something" maxlength="255" >
+                                    <button type="submit" class="btn btn-primary" id="btn-chat" onclick="getData()">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="border right-border col-lg-2"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript">
+        function getData() {
+            var input = document.getElementById('user-input').value;
+
+            jQuery.ajax({
+                url: '/',
+                method: 'POST',
+                success: function(result) {
+                    var html = '';
+                    
+                    document.getElementsByClassName("output").innerHTML = html;
+                }
+            })
+
+           
+        }
+
+    </script>
+</html>
