@@ -78,7 +78,7 @@
                         </div>
                         
                         <div class="input-field col-lg-12">
-                            <form action="" method="POST" enctype="multipart/form-data" id="form-chat">
+                            <form action="/home" method="POST" enctype="multipart/form-data" id="form-chat">
                                 <div class="voice form-group col-lg-1">
                                         <button class="btn btn-danger"><i class="fa fa-microphone"></i></button>
                                 </div>
@@ -99,7 +99,7 @@
             var input = document.getElementById('user-input').value;
 
             jQuery.ajax({
-                url: '/',
+                url: '/home',
                 method: 'POST',
                 success: function(result) {
 
